@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Shufflepuck Apocalypse Neon Arcade</title>
+    <meta name="description" content="Experience Neon Shufflepuck: a fast-paced cyberpunk air hockey arcade game. Challenge adaptive AI in a retro-futuristic race to 7. Play now!">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div style="position:fixed;bottom:20px;left:20px;z-index:2147483647;font-family:system-ui,sans-serif">
+      <style>
+        @keyframes kp_P {
+          0% {
+            box-shadow: 0 0 0 0 rgba(250, 92, 92, 0.7);
+            transform: scale(1)
+          }
+
+          70% {
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+            transform: scale(1.05)
+          }
+
+          100% {
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            transform: scale(1)
+          }
+        }
+      </style>
+    </div>
+    <div id="ui">
+      <div id="score"><span id="p-score">0</span> - <span id="a-score">0</span></div>
+    </div>
+    <div id="message">
+      <h1>Neon Shufflepuck</h1>
+      <p>Choose Difficulty:</p>
+      <div id="difficulty-options">
+        <button class="difficulty-btn" data-speed="5.0">Beginner</button>
+        <button class="difficulty-btn" data-speed="11.0">Expert</button>
+      </div>
+      <p id="game-info">First to 7 points wins.</p>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <script src="script.js" defer></script>
+  </body>
+</html>
